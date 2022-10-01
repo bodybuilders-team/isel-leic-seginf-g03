@@ -63,7 +63,19 @@ O processo de decifra de uma mensagem é o seguinte:
 
 ### Exercício 3
 
-...
+#### 3.1
+
+O método `sign()` da class `Signature` é usado para gerar a assinatura digital de um documento. Esta assinatura digital
+é gerada ao cifrar a hash do documento a ser assinado com a chave privada do emissor. Para gerar a assinatura digital, o
+emissor utiliza a função `initSign(PrivateKey privateKey)` para inicializar a assinatura digital com a chave privada.
+Depois, o emissor utiliza a função `update(byte[] data)` para atualizar a hash do documento a ser assinado. Por fim, o
+emissor utiliza a função `sign()` para gerar a assinatura digital do documento do hash calculado até ao momento.
+
+#### 3.2
+
+Caso seja computacionalmente fazível obter uma nova mensagem que produza a mesma hash que a mensagem original, seria
+possível alterar a mensagem sem que o recetor percebesse. Isto porque ao verificar a assinatura digital, a hash extraída
+da assinatura digital seria igual à hash da mensagem alterada.
 
 ---
 
