@@ -1,11 +1,9 @@
-import java.io.BufferedInputStream
-import java.io.FileInputStream
+import java.io.File
 import java.security.DigestInputStream
 import java.security.MessageDigest
 
 private const val HASH_FUNCTION_INDEX = 0
 private const val FILE_PATH_INDEX = 1
-private const val BUFFER_SIZE = 1024
 
 /**
  * Entry point for the application to generate file hashes.
@@ -21,17 +19,15 @@ fun main(args: Array<String>) {
     val file = args[FILE_PATH_INDEX]
 
     val digestInputStream = DigestInputStream(
-        BufferedInputStream(FileInputStream(file)),
+        File(file).inputStream(),
         MessageDigest.getInstance(hashFunction)
     )
 
-    val buffer = ByteArray(BUFFER_SIZE)
-    while (true) {
-        val readCount: Int = digestInputStream.read(buffer)
-        if (readCount < 0) break
-    }
+    @Suppress("ControlFlowWithEmptyBody")
+    while (digestInputStream.read() != -1);
 
-    digestInputStream.messageDigest
+    digestInputStream
+        .messageDigest
         .digest()
         .joinToString("") { "%02x".format(it) }
         .also { println(it) }

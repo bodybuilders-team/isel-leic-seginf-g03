@@ -12,6 +12,9 @@ repositories {
 }
 
 dependencies {
+    implementation("commons-codec:commons-codec:1.15")
+    implementation("org.bouncycastle:bcpkix-jdk15on:1.70")
+
     testImplementation(kotlin("test"))
 }
 
