@@ -81,7 +81,23 @@ da assinatura digital seria igual à hash da mensagem alterada.
 
 ### Exercício 4
 
-...
+#### 4.1
+
+TODO("Perguntar ao professor se era isto que queria dizer sobre a chave?")
+
+A única situação em que a chave necessária para validar a assinatura de um certificado não está presente no certificado
+é nos certificados das root certificate authorities, que já são pré-instalados no sistema operativo / browser.
+
+#### 4.2
+
+O MAC não é utilizado devido ao facto de ser necessário que o emissor e o recetor tenham uma chave secreta em comum para
+gerar o MAC. Como o objetivo do certificado é que qualquer pessoa possa verificar a assinatura digital, não é possível
+que o emissor e o recetor tenham uma chave secreta em comum.
+
+#### 4.3
+
+A diferença entre ficheiros .cer e ficheiros .pfx é que o ficheiro .cer contém apenas o certificado, enquanto que
+o ficheiro .pfx contém o certificado e a chave privada.
 
 ---
 

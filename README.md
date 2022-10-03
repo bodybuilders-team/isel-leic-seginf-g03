@@ -82,7 +82,24 @@ the hash extracted from the digital signature would be equal to the hash of the 
 
 ### Exercise 4
 
-...
+#### 4.1
+
+#### 4.1
+
+The only situation in which the key necessary to validate the signature of a certificate is not present in the certificate
+is in the certificates of the root certificate authorities, which are already pre-installed in the operating system /
+browser.
+
+#### 4.2
+
+The MAC is not used because it is necessary for the sender and the recipient to have a common secret key to generate the
+MAC. As the purpose of the certificate is for anyone to be able to verify the digital signature, it is not possible for
+the sender and the recipient to have a common secret key.
+
+#### 4.3
+
+The difference between .cer files and .pfx files is that the .cer file only contains the certificate, while the .pfx file
+contains the certificate and the private key.
 
 ---
 
