@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap.">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/decryptedTestFile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/encryptedSymmetricKey.enc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/encryptedTestFile.enc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FMe4l8AtFLDgCOlWYhMOdREnMB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ISEL/5th semester/SegInf/isel-leic-seginf-g03&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Kotlin.Decipher Application Cipher">
+    <configuration name="Cipher Application Cipher" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="exercise6.MainKt" />
+      <module name="isel-leic-seginf-g03.main" />
+      <option name="PROGRAM_PARAMETERS" value="-enc .\docs\big_file.jpg .\docs\end-entities\Bob_1.cer .\docs\encryptedTestFile.enc .\docs\encryptedSymmetricKey.enc" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Decipher Application Cipher" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="exercise6.MainKt" />
+      <module name="isel-leic-seginf-g03.main" />
+      <option name="PROGRAM_PARAMETERS" value="-dec .\docs\encryptedTestFile.enc .\docs\encryptedSymmetricKey.enc .\docs\pfx\Bob_1.pfx changeit 1 .\docs\decryptedTestFile.jpg" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="File Hash Generator" type="JetRunConfigurationType" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="isel-leic-seginf-g03.main" />
+      <option name="PROGRAM_PARAMETERS" value="SHA-1 .\docs\end-entities\Alice_1.cer" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeyPairGeneratorKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercise6.KeyPairGeneratorKt" />
+      <module name="isel-leic-seginf-g03.main" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestKt" />
+      <module name="isel-leic-seginf-g03.main" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Kotlin.Cipher Application Cipher" />
+      <item itemvalue="Kotlin.Decipher Application Cipher" />
+      <item itemvalue="Kotlin.KeyPairGeneratorKt" />
+      <item itemvalue="Kotlin.TestKt" />
+      <item itemvalue="Kotlin.File Hash Generator" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.File Hash Generator" />
+        <item itemvalue="Kotlin.TestKt" />
+        <item itemvalue="Kotlin.KeyPairGeneratorKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="" />
+      <created>1664306190859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664306190859</updated>
+      <workItem from="1664306192287" duration="3237000" />
+      <workItem from="1664350817627" duration="11208000" />
+      <workItem from="1664564051727" duration="8355000" />
+      <workItem from="1664579428790" duration="5000" />
+      <workItem from="1664625147003" duration="7226000" />
+      <workItem from="1664648102484" duration="3048000" />
+      <workItem from="1664661217995" duration="17000" />
+      <workItem from="1664823479582" duration="1194000" />
+      <workItem from="1665651426810" duration="4534000" />
+    </task>
+    <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
+      <created>1664647484344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664647484344</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added CBC mode of operation to cypher algorithm.">
+      <created>1665653205120</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665653205120</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap.">
+      <created>1665655805979</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665655805979</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented the Hybrid Cipher and an RSA key pair generator." />
+    <MESSAGE value="Added CBC mode of operation to cypher algorithm." />
+    <MESSAGE value="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap." />
+  </component>
+</project>
