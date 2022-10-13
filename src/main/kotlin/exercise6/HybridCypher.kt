@@ -12,10 +12,11 @@ import javax.crypto.CipherOutputStream
 import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
 import javax.crypto.spec.IvParameterSpec
-import javax.crypto.spec.SecretKeySpec
 
 const val MODE_INDEX = 0
 const val SYMMETRIC_KEY_SIZE = 128
+const val IV_SIZE = SYMMETRIC_KEY_SIZE
+const val IV_BYTES_SIZE = IV_SIZE / 8
 
 /**
  * Encrypts a file with a symmetric key and encrypts the symmetric key with a public key.
@@ -60,11 +61,11 @@ fun encrypt(
     val certificate = certificateFactory.generateCertificate(certificateFile.inputStream())
     val publicKey = certificate.publicKey
 
-    val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.ENCRYPT_MODE, publicKey) }
+    val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.WRAP_MODE, publicKey) }
 
-    val encryptedSymmetricKey = rsaCipher.doFinal(key.encoded + iv)
+    val cypheredSymmetricKey = iv + rsaCipher.wrap(key)
 
-    encryptedSymmetricKeyFile.writeBytes(encryptedSymmetricKey)
+    encryptedSymmetricKeyFile.writeBytes(cypheredSymmetricKey)
 }
 
 /**
@@ -95,16 +96,19 @@ fun decrypt(
     keyStore.load(keystoreFile.inputStream(), keystorePassword.toCharArray())
 
     val privateKey = keyStore.getKey(keystoreKeyAlias, keystorePassword.toCharArray())
-    val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.DECRYPT_MODE, privateKey) }
+    val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.UNWRAP_MODE, privateKey) }
 
     val encryptedSymmetricKey = encryptedSymmetricKeyFile.readBytes()
-//    val symmetricKey = rsaCipher.doFinal(encryptedSymmetricKey)
-    val (symmetricKey, iv) = rsaCipher.doFinal(encryptedSymmetricKey).splitAt(SYMMETRIC_KEY_SIZE / 8)
+
+    // Change with wrap and unwrap
+    val (iv, encryptedSymmetricSecretKey) = encryptedSymmetricKey.splitAt(IV_BYTES_SIZE)
 
     // Decrypt file with symmetric key (AES)
-    val secretKey = SecretKeySpec(symmetricKey, "AES")
+    val secretKey = rsaCipher.unwrap(encryptedSymmetricSecretKey, "AES", Cipher.SECRET_KEY)
 
-    val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding").also { it.init(Cipher.DECRYPT_MODE, secretKey, IvParameterSpec(iv)) }
+    val cipher =
+        Cipher.getInstance("AES/CBC/PKCS5Padding")
+            .also { it.init(Cipher.DECRYPT_MODE, secretKey, IvParameterSpec(iv)) }
 
     CipherOutputStream(decryptedFile.outputStream(), cipher).use { cipherOutputStream ->
         Base64InputStream(encryptedFile.inputStream()).use { inputStream ->
