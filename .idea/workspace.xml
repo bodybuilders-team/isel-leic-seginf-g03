@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Exercises 4 done.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise5/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise5/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise6/HybridCypher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/HybridCypher.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise6/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Main.kt" afterDir="false" />
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Implemented certificate validation.">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665655805979</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented certificate validation.">
+      <created>1665660438900</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665660438900</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +161,8 @@
     <MESSAGE value="Implemented the Hybrid Cipher and an RSA key pair generator." />
     <MESSAGE value="Added CBC mode of operation to cypher algorithm." />
     <MESSAGE value="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap." />
+    <MESSAGE value="Implemented certificate validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented certificate validation." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
