@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap.">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/decryptedTestFile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/encryptedSymmetricKey.enc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/encryptedTestFile.enc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/test.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Exercises 4 done.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise5/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise5/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise6/HybridCypher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/HybridCypher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise6/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2FMe4l8AtFLDgCOlWYhMOdREnMB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,18 +56,23 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="exercise6" />
+    </key>
+  </component>
   <component name="RunManager" selected="Kotlin.Decipher Application Cipher">
     <configuration name="Cipher Application Cipher" type="JetRunConfigurationType">
-      <option name="MAIN_CLASS_NAME" value="exercise6.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.exercise6.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
-      <option name="PROGRAM_PARAMETERS" value="-enc .\docs\big_file.jpg .\docs\end-entities\Bob_1.cer .\docs\encryptedTestFile.enc .\docs\encryptedSymmetricKey.enc" />
+      <option name="PROGRAM_PARAMETERS" value="-enc .\docs\big_file.jpg .\docs\end-entities\Bob_1.cer .\docs\trust-anchors\CA.jks changeit .\docs\cert-int .\docs\encryptedTestFile.enc .\docs\encryptedSymmetricKey.enc" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Decipher Application Cipher" type="JetRunConfigurationType">
-      <option name="MAIN_CLASS_NAME" value="exercise6.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.exercise6.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
       <option name="PROGRAM_PARAMETERS" value="-dec .\docs\encryptedTestFile.enc .\docs\encryptedSymmetricKey.enc .\docs\pfx\Bob_1.pfx changeit 1 .\docs\decryptedTestFile.jpg" />
       <shortenClasspath name="NONE" />
@@ -74,25 +81,9 @@
       </method>
     </configuration>
     <configuration name="File Hash Generator" type="JetRunConfigurationType" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.exercise5.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
       <option name="PROGRAM_PARAMETERS" value="SHA-1 .\docs\end-entities\Alice_1.cer" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KeyPairGeneratorKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercise6.KeyPairGeneratorKt" />
-      <module name="isel-leic-seginf-g03.main" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestKt" />
-      <module name="isel-leic-seginf-g03.main" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -101,15 +92,11 @@
     <list>
       <item itemvalue="Kotlin.Cipher Application Cipher" />
       <item itemvalue="Kotlin.Decipher Application Cipher" />
-      <item itemvalue="Kotlin.KeyPairGeneratorKt" />
-      <item itemvalue="Kotlin.TestKt" />
       <item itemvalue="Kotlin.File Hash Generator" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.File Hash Generator" />
-        <item itemvalue="Kotlin.TestKt" />
-        <item itemvalue="Kotlin.KeyPairGeneratorKt" />
       </list>
     </recent_temporary>
   </component>
@@ -174,5 +161,12 @@
     <MESSAGE value="Added CBC mode of operation to cypher algorithm." />
     <MESSAGE value="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap." />
     <option name="LAST_COMMIT_MESSAGE" value="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap." />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JetRunConfigurationType">
+        <watch expression="((PKIXBuilderParameters)params).unmodTrustAnchors" custom="java.security.cert.PKIXBuilderParameters" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

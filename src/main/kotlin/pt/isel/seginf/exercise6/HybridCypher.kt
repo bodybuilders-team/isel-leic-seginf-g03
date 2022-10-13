@@ -1,11 +1,17 @@
-package exercise6
+package pt.isel.seginf.exercise6
 
 import org.apache.commons.codec.binary.Base64InputStream
 import org.apache.commons.codec.binary.Base64OutputStream
 import java.io.File
 import java.security.KeyStore
 import java.security.SecureRandom
+import java.security.cert.CertPathBuilder
+import java.security.cert.CertStore
 import java.security.cert.CertificateFactory
+import java.security.cert.CollectionCertStoreParameters
+import java.security.cert.PKIXBuilderParameters
+import java.security.cert.X509CertSelector
+import java.security.cert.X509Certificate
 import javax.crypto.Cipher
 import javax.crypto.CipherInputStream
 import javax.crypto.CipherOutputStream
@@ -13,22 +19,27 @@ import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
 import javax.crypto.spec.IvParameterSpec
 
-const val MODE_INDEX = 0
-const val SYMMETRIC_KEY_SIZE = 128
-const val IV_SIZE = SYMMETRIC_KEY_SIZE
-const val IV_BYTES_SIZE = IV_SIZE / 8
+private const val SYMMETRIC_KEY_SIZE = 128
+private const val IV_SIZE = SYMMETRIC_KEY_SIZE
+private const val IV_BYTES_SIZE = IV_SIZE / 8
 
 /**
  * Encrypts a file with a symmetric key and encrypts the symmetric key with a public key.
  *
  * @param filePath The path to the file to encrypt.
  * @param certificateFilePath The path to the certificate file.
+ * @param trustedCAsPath The path to the trusted CAs keystore.
+ * @param trustedCAsKeyStorePassword The password for the trusted CAs keystore.
+ * @param intCAsPath The path to the intermediate CAs files directory.
  * @param encryptedFilePath The path to the encrypted file.
  * @param encryptedSymmetricKeyFilePath The path to the encrypted symmetric key file.
  */
 fun encrypt(
     filePath: String,
     certificateFilePath: String,
+    trustedCAsPath: String,
+    trustedCAsKeyStorePassword: String,
+    intCAsPath: String,
     encryptedFilePath: String,
     encryptedSymmetricKeyFilePath: String
 ) {
@@ -37,35 +48,55 @@ fun encrypt(
     val encryptedFile = File(encryptedFilePath)
     val encryptedSymmetricKeyFile = File(encryptedSymmetricKeyFilePath)
 
-    val keyGen = KeyGenerator.getInstance("AES").also { it.init(SYMMETRIC_KEY_SIZE) }
-    val key: SecretKey = keyGen.generateKey()
-
     val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
 
-    val ivSecureRandom = SecureRandom.getInstance("SHA1PRNG")
+    // Generate a random symmetric key
+    val keyGenerator = KeyGenerator.getInstance("AES").also { it.init(SYMMETRIC_KEY_SIZE) }
+    val key: SecretKey = keyGenerator.generateKey()
 
+    // Generate a random IV
+    val ivSecureRandom = SecureRandom.getInstance("SHA1PRNG")
     val iv = ByteArray(cipher.blockSize)
     ivSecureRandom.nextBytes(iv)
 
     cipher.init(Cipher.ENCRYPT_MODE, key, IvParameterSpec(iv))
 
-    CipherInputStream(file.inputStream(), cipher)
-        .use { inputStream ->
-            Base64OutputStream(encryptedFile.outputStream()).use { outputStream ->
-                inputStream.copyTo(outputStream)
-            }
+    // Encrypt the file
+    CipherInputStream(file.inputStream(), cipher).use { inputStream ->
+        Base64OutputStream(encryptedFile.outputStream()).use { outputStream ->
+            inputStream.copyTo(outputStream)
         }
+    }
 
     // Encrypt symmetric key with public key
-    val certificateFactory = CertificateFactory.getInstance("X.509")
-    val certificate = certificateFactory.generateCertificate(certificateFile.inputStream())
-    val publicKey = certificate.publicKey
+    val cerFactory = CertificateFactory.getInstance("X.509")
+    val certificate = cerFactory.generateCertificate(certificateFile.inputStream()) as X509Certificate
 
-    val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.WRAP_MODE, publicKey) }
+    // Validate certificate chain
+    val intCAs = cerFactory.getCertificates(intCAsPath)
+    val trustedCAs = KeyStore.getInstance("JKS")
+        .also {
+            it.load(
+                File(trustedCAsPath).inputStream(),
+                trustedCAsKeyStorePassword.toCharArray()
+            )
+        }
 
-    val cypheredSymmetricKey = iv + rsaCipher.wrap(key)
+    val certStore = CertStore.getInstance("Collection", CollectionCertStoreParameters(intCAs + certificate))
 
-    encryptedSymmetricKeyFile.writeBytes(cypheredSymmetricKey)
+    val certBuilder = CertPathBuilder.getInstance("PKIX")
+    val params = PKIXBuilderParameters(
+        trustedCAs,
+        X509CertSelector().also { it.certificate = certificate }
+    ).also {
+        it.isRevocationEnabled = false
+        it.addCertStore(certStore)
+    }
+
+    certBuilder.build(params)
+
+    val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.WRAP_MODE, certificate.publicKey) }
+    encryptedSymmetricKeyFile.writeBytes(iv + rsaCipher.wrap(key))
 }
 
 /**
@@ -106,16 +137,13 @@ fun decrypt(
     // Decrypt file with symmetric key (AES)
     val secretKey = rsaCipher.unwrap(encryptedSymmetricSecretKey, "AES", Cipher.SECRET_KEY)
 
-    val cipher =
-        Cipher.getInstance("AES/CBC/PKCS5Padding")
-            .also { it.init(Cipher.DECRYPT_MODE, secretKey, IvParameterSpec(iv)) }
+    val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
+        .also { it.init(Cipher.DECRYPT_MODE, secretKey, IvParameterSpec(iv)) }
 
+    // Decrypt file
     CipherOutputStream(decryptedFile.outputStream(), cipher).use { cipherOutputStream ->
         Base64InputStream(encryptedFile.inputStream()).use { inputStream ->
             inputStream.copyTo(cipherOutputStream)
         }
     }
 }
-
-private fun ByteArray.splitAt(i: Int): Pair<ByteArray, ByteArray> =
-    Pair(copyOfRange(0, i), copyOfRange(i, size))
