@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Implemented certificate validation.">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Modified configuration.">
+      <change afterPath="$PROJECT_DIR$/README.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.pt.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.pt.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +51,14 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="exercise6" />
     </key>
@@ -111,6 +119,10 @@
       <workItem from="1664661217995" duration="17000" />
       <workItem from="1664823479582" duration="1194000" />
       <workItem from="1665651426810" duration="4534000" />
+      <workItem from="1665661098597" duration="11000" />
+      <workItem from="1666355586749" duration="1460000" />
+      <workItem from="1666378460743" duration="2016000" />
+      <workItem from="1666605429651" duration="5129000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>
@@ -140,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665660438900</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modified configuration.">
+      <created>1665660513504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665660513504</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +181,8 @@
     <MESSAGE value="Added CBC mode of operation to cypher algorithm." />
     <MESSAGE value="Modified symmetric key encryption to use Cipher.wrap and Cipher.unwrap." />
     <MESSAGE value="Implemented certificate validation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented certificate validation." />
+    <MESSAGE value="Modified configuration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified configuration." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
