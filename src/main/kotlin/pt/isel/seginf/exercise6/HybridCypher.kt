@@ -19,9 +19,7 @@ import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
 import javax.crypto.spec.IvParameterSpec
 
-private const val SYMMETRIC_KEY_SIZE = 128
-private const val IV_SIZE = SYMMETRIC_KEY_SIZE
-private const val IV_BYTES_SIZE = IV_SIZE / 8
+private const val IV_BYTES_SIZE = 16 // AES BLOCK SIZE
 
 /**
  * Encrypts a file with a symmetric key and encrypts the symmetric key with a public key.
@@ -51,7 +49,7 @@ fun encrypt(
     val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
 
     // Generate a random symmetric key
-    val keyGenerator = KeyGenerator.getInstance("AES").also { it.init(SYMMETRIC_KEY_SIZE) }
+    val keyGenerator = KeyGenerator.getInstance("AES")
     val key: SecretKey = keyGenerator.generateKey()
 
     // Generate a random IV
@@ -96,7 +94,9 @@ fun encrypt(
     certBuilder.build(params)
 
     val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.WRAP_MODE, certificate.publicKey) }
-    encryptedSymmetricKeyFile.writeBytes(iv + rsaCipher.wrap(key))
+    Base64OutputStream(encryptedSymmetricKeyFile.outputStream()).use { outputStream ->
+        outputStream.write(iv + rsaCipher.wrap(key))
+    }
 }
 
 /**
@@ -129,7 +129,7 @@ fun decrypt(
     val privateKey = keyStore.getKey(keystoreKeyAlias, keystorePassword.toCharArray())
     val rsaCipher = Cipher.getInstance("RSA").also { it.init(Cipher.UNWRAP_MODE, privateKey) }
 
-    val encryptedSymmetricKey = encryptedSymmetricKeyFile.readBytes()
+    val encryptedSymmetricKey = Base64InputStream(encryptedSymmetricKeyFile.inputStream()).readBytes()
 
     // Change with wrap and unwrap
     val (iv, encryptedSymmetricSecretKey) = encryptedSymmetricKey.splitAt(IV_BYTES_SIZE)
