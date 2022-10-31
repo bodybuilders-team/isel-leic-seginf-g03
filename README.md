@@ -30,6 +30,10 @@ Winter Semester of 2022/2023
 `xi = D(k)(yi) ⊕ RV`, for `i` = 1, ..., _L_, where `D` is the decryption operation, `k` is the decryption key, `XOR`
 denotes the bit-wise exclusive or.
 
+<p align="center">
+  <img src="./docs/diagrams/diagrams-ex1.svg" alt="Exercise 1" />
+</p>
+
 #### 1.2
 
 **a)** As _RV_ is constant for all blocks, by applying _RV_ with the XOR bit operation, the patterns of the original

@@ -45,7 +45,7 @@ private const val DECRYPTED_FILE_PATH_INDEX_DECRYPT = 6
  * 5. The alias of the key in the keystore
  * 6. The path to the decrypted file
  *
- * @param args The arguments to the application
+ * @param args the arguments to the application
  */
 fun main(args: Array<String>) {
     if (args.isEmpty()) {

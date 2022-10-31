@@ -1,3 +1,5 @@
+package pt.isel.seginf.exercise5
+
 import java.io.File
 import java.security.DigestInputStream
 import java.security.MessageDigest
@@ -12,7 +14,7 @@ private const val FILE_PATH_INDEX = 1
  * 1. The hash function to use (e.g. MD5, SHA-1, SHA-256, etc.)
  * 2. The path to the file to hash
  *
- * @param args The arguments to the application
+ * @param args the arguments to the application
  */
 fun main(args: Array<String>) {
     val hashFunction = args[HASH_FUNCTION_INDEX]

@@ -30,6 +30,10 @@ Semestre de Inverno 2022/2023
 `xi = D(k)(yi) ⊕ RV`, para `i` = 1, ..., _L_, onde `D` é a operação de decifra, `k` é a chave de decifra, `⊕` denota o
 ou-exclusivo bit a bit.
 
+<p align="center">
+  <img src="./docs/diagrams/diagrams-ex1.svg" alt="Exercise 1" />
+</p>
+
 #### 1.2
 
 **a)** Como _RV_ é constante para todos os blocos, ao aplicar _RV_ com a operação XOR bit a bit, os padrões do texto
