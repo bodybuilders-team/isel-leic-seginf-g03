@@ -1,6 +1,6 @@
-# isel-leic-seginf-g03
+# Segurança Informática - Fase 1
 
-> Projecto de Segurança Informática do grupo 03 da turma LEIC51D.
+> Primeira fase do projeto de Segurança Informática do grupo 03 da turma LEIC51D.
 
 The English version of this document is available [here](README.md).
 
@@ -31,7 +31,7 @@ Semestre de Inverno 2022/2023
 ou-exclusivo bit a bit.
 
 <p align="center">
-  <img src="./docs/diagrams/diagrams-ex1.svg" alt="Exercise 1" />
+  <img src="diagrams/diagrams-ex1.svg" alt="Exercise 1" />
 </p>
 
 #### 1.2
@@ -119,10 +119,10 @@ Information Exchange".
 
 ### Exercício 5
 
-O quinto exercício está implementado na diretoria [exercise5](./src/main/kotlin/pt/isel/seginf/exercise5).
+O quinto exercício está implementado na diretoria [exercise5](../../src/main/kotlin/pt/isel/seginf/exercise5).
 
 ---
 
 ### Exercício 6
 
-O sexto exercício está implementado na diretoria [exercise6](./src/main/kotlin/pt/isel/seginf/exercise6).
+O sexto exercício está implementado na diretoria [exercise6](../../src/main/kotlin/pt/isel/seginf/exercise6).

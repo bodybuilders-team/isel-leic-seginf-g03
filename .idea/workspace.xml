@@ -4,26 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Phase 1 delivered.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;&#10;Co-authored-by: André Páscoa &lt;a48089@alunos.isel.pt&gt;">
-      <change afterPath="$PROJECT_DIR$/docs/diagrams/diagrams-ex1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/diagrams/diagrams.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;">
+      <change afterPath="$PROJECT_DIR$/docs/phase1/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/phase2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/phase2/README.pt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/phase2/seginf_inv2223_phase2.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.pt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/big_file.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/testFile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/isel-leic-seginf-g03.zip" beforeDir="false" afterPath="$PROJECT_DIR$/isel-leic-seginf-g03.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise5/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise5/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/HybridCypher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/HybridCypher.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/README.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/README.pt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.pt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/README.pt.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/cert-int/CA1-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/cert-int/CA1-int.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/cert-int/CA2-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/cert-int/CA2-int.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/diagrams/diagrams-ex1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams-ex1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/diagrams/diagrams.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/end-entities/Alice_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/end-entities/Alice_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/end-entities/Bob_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/end-entities/Bob_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/end-entities/Carol_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/end-entities/Carol_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pfx/Alice_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Alice_1.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pfx/Alice_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Alice_2.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pfx/Bob_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Bob_1.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pfx/Bob_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Bob_2.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pfx/Carol_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Carol_1.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pfx/Carol_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Carol_2.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/seginf_inv2223_trab1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/seginf_inv2223_phase1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/trust-anchors/CA.jks" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/trust-anchors/CA1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/trust-anchors/CA2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isel-leic-seginf-g03.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/isel-leic-seginf-g03-phase1.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -66,6 +87,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\phase1" />
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\phase2" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -135,7 +158,8 @@
       <workItem from="1666613509192" duration="193000" />
       <workItem from="1667041755310" duration="207000" />
       <workItem from="1667216565617" duration="3124000" />
-      <workItem from="1667222017773" duration="3138000" />
+      <workItem from="1667222017773" duration="3301000" />
+      <workItem from="1667831288769" duration="3371000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>
@@ -179,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666611612620</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;">
+      <created>1667230619174</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667230619174</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +234,8 @@
     <MESSAGE value="Implemented certificate validation." />
     <MESSAGE value="Modified configuration." />
     <MESSAGE value="Phase 1 delivered.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;&#10;Co-authored-by: André Páscoa &lt;a48089@alunos.isel.pt&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Phase 1 delivered.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;&#10;Co-authored-by: André Páscoa &lt;a48089@alunos.isel.pt&gt;" />
+    <MESSAGE value="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
