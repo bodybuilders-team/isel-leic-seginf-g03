@@ -1,4 +1,4 @@
-package pt.isel.seginf.exercise6 // ktlint-disable filename
+package pt.isel.seginf.trab1.ex6 // ktlint-disable filename
 
 import java.io.File
 import java.security.cert.CertificateFactory

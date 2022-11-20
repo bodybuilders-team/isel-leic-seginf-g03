@@ -1,4 +1,4 @@
-package pt.isel.seginf.exercise6
+package pt.isel.seginf.trab1.ex6
 
 import org.apache.commons.codec.binary.Base64InputStream
 import org.apache.commons.codec.binary.Base64OutputStream

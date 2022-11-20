@@ -1,4 +1,4 @@
-# Computer Security - Phase 2
+# Computer Security - Work 2
 
 > Computer Security project second phase of group 03 from LEIC51D class.
 

@@ -4,37 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;">
-      <change afterPath="$PROJECT_DIR$/docs/phase1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/phase2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/phase2/README.pt.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/phase2/seginf_inv2223_phase2.pdf" afterDir="false" />
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Phase 2 exercises 1 and 2 done.">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/CA2.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-certificate.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-privatekey.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.cer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.pfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/https-server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab2/ex6/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab2/ex6/truststore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/README.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/README.pt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.pt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/README.pt.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cert-int/CA1-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/cert-int/CA1-int.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cert-int/CA2-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/cert-int/CA2-int.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/diagrams/diagrams-ex1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams-ex1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/diagrams/diagrams.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/end-entities/Alice_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/end-entities/Alice_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/end-entities/Bob_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/end-entities/Bob_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/end-entities/Carol_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/end-entities/Carol_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pfx/Alice_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Alice_1.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pfx/Alice_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Alice_2.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pfx/Bob_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Bob_1.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pfx/Bob_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Bob_2.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pfx/Carol_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Carol_1.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pfx/Carol_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/pfx/Carol_2.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/seginf_inv2223_trab1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/seginf_inv2223_phase1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/trust-anchors/CA.jks" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/trust-anchors/CA1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/trust-anchors/CA2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isel-leic-seginf-g03.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/phase1/isel-leic-seginf-g03-phase1.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pt.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/cert-int/CA1-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/cert-int/CA1-int.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/cert-int/CA2-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/cert-int/CA2-int.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams-ex1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/diagrams/diagrams-ex1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/diagrams/diagrams.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Alice_1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Alice_2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Bob_1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Bob_2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Carol_1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Carol_2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/isel-leic-seginf-g03-phase1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/isel-leic-seginf-g03-trab1.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Alice_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Alice_1.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Alice_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Alice_2.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Bob_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Bob_1.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Bob_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Bob_2.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Carol_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Carol_1.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Carol_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Carol_2.pfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/seginf_inv2223_phase1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/seginf_inv2223_trab1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA.jks" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/trust-anchors/CA.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/trust-anchors/CA1.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/trust-anchors/CA2.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase2/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.pt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase2/seginf_inv2223_phase2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/seginf_inv2223_trab2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise5/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex5/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/HybridCypher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex6/HybridCypher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex6/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex6/Utils.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +68,27 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="package.json" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -71,31 +104,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ISEL/5th semester/SegInf/isel-leic-seginf-g03&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "14.18.0",
+    "javascript.nodejs.core.library.typings.version": "14.18.0",
+    "last_opened_file_path": "C:/ISEL/Courses/5th Semester/SegInf/isel-leic-seginf-g03/src/main/kotlin/pt/isel/seginf/trab2/ex6",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.ktlint"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\kotlin\pt\isel\seginf\trab2\ex6" />
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server" />
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\trab2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server\certificates" />
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server" />
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\phase1" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\phase2" />
-      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="exercise6" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Decipher Application Cipher">
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="isel-leic-seginf-g03 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Cipher Application Cipher" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.exercise6.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
@@ -123,13 +187,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.trab2.ex6.MainKt" />
+      <module name="isel-leic-seginf-g03.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="https-server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/js/https-server/https-server.js" working-dir="$PROJECT_DIR$/src/main/js/https-server">
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Gradle.isel-leic-seginf-g03 [build]" />
       <item itemvalue="Kotlin.Cipher Application Cipher" />
       <item itemvalue="Kotlin.Decipher Application Cipher" />
+      <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.File Hash Generator" />
+      <item itemvalue="Node.js.https-server.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Node.js.https-server.js" />
+        <item itemvalue="Gradle.isel-leic-seginf-g03 [build]" />
         <item itemvalue="Kotlin.File Hash Generator" />
       </list>
     </recent_temporary>
@@ -159,7 +239,10 @@
       <workItem from="1667041755310" duration="207000" />
       <workItem from="1667216565617" duration="3124000" />
       <workItem from="1667222017773" duration="3301000" />
-      <workItem from="1667831288769" duration="3371000" />
+      <workItem from="1667831288769" duration="3474000" />
+      <workItem from="1668000727996" duration="131000" />
+      <workItem from="1668894851745" duration="5053000" />
+      <workItem from="1668955163978" duration="18086000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>
@@ -210,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667230619174</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Phase 2 exercises 1 and 2 done.">
+      <created>1667837261230</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667837261230</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +325,8 @@
     <MESSAGE value="Modified configuration." />
     <MESSAGE value="Phase 1 delivered.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;&#10;Co-authored-by: André Páscoa &lt;a48089@alunos.isel.pt&gt;" />
     <MESSAGE value="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;" />
+    <MESSAGE value="Phase 2 exercises 1 and 2 done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Phase 2 exercises 1 and 2 done." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

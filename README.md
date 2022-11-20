@@ -4,8 +4,8 @@
 
 The project is divided in 2 phases:
 
-* [Phase 1](docs/phase1/README.md)
-* [Phase 2](docs/phase2/README.md)
+* [Phase 1](docs/trab1/README.md)
+* [Phase 2](docs/trab2/README.md)
 
 ## Authors
 

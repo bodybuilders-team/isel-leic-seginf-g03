@@ -3,3 +3,4 @@
 
 *.bkp
 *.dtmp
+/src/main/js/https-server/node_modules/

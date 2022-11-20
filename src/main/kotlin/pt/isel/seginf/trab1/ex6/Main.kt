@@ -1,4 +1,4 @@
-package pt.isel.seginf.exercise6
+package pt.isel.seginf.trab1.ex6
 
 private const val MODE_INDEX = 0
 private const val ENCRYPT_MODE = "-enc"

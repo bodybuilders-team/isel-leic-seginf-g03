@@ -1,4 +1,4 @@
-package pt.isel.seginf.exercise5
+package pt.isel.seginf.trab1.ex5
 
 import java.io.File
 import java.security.DigestInputStream
