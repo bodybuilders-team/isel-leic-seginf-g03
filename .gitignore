@@ -4,3 +4,4 @@
 *.bkp
 *.dtmp
 /src/main/js/https-server/node_modules/
+/src/main/js/ex7/node_modules/
