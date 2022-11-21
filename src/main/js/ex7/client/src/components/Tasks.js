@@ -1,23 +1,25 @@
 import { useEffect, useState } from 'react';
+import {getTaskLists, getTasks} from '../services/apiService';
 
-
+/**
+ * Tasks component.
+ */
 function Tasks() {
 	const [taskLists, setTaskLists] = useState([]);
 
 	useEffect(() => {
 		console.log("Fetching task lists");
+
 		async function getTaskLists() {
-			const res = await fetch('/api/taskLists');
-			const taskLists = await res.json();
+			const taskLists = await getTaskLists();
+
 			console.log(taskLists);
 
 			for (const taskList of taskLists) {
-				const res = await fetch(`/api/tasks?taskListId=${taskList.id}`);
-				const tasks = await res.json();
-
+				const tasks = await getTasks(taskList.id);
 				taskList.tasks = tasks;
 			}
-			console.log(taskLists);
+
 			setTaskLists(taskLists);
 		}
 
@@ -43,8 +45,6 @@ function Tasks() {
 									})
 								}
 							</ul>
-
-
 						</div>
 					);
 				})

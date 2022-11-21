@@ -4,54 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Phase 2 exercises 1 and 2 done.">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/CA2.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-certificate.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-privatekey.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.cer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.pfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/https-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/https-server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab2/ex6/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab2/ex6/truststore.jks" afterDir="false" />
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;">
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/services/apiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_model.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_policy.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/taskLists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/tasks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/async-jsonwebtoken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/certificates/certificate.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/certificates/privatekey.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pt.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/cert-int/CA1-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/cert-int/CA1-int.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/cert-int/CA2-int.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/cert-int/CA2-int.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams-ex1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/diagrams/diagrams-ex1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/diagrams/diagrams.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/diagrams/diagrams.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Alice_1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Alice_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Alice_2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Bob_1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Bob_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Bob_2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Carol_1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/end-entities/Carol_2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/end-entities/Carol_2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/isel-leic-seginf-g03-phase1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/isel-leic-seginf-g03-trab1.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Alice_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Alice_1.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Alice_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Alice_2.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Bob_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Bob_1.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Bob_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Bob_2.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Carol_1.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Carol_1.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/pfx/Carol_2.pfx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/pfx/Carol_2.pfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/seginf_inv2223_phase1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/seginf_inv2223_trab1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA.jks" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/trust-anchors/CA.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA1.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/trust-anchors/CA1.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/trust-anchors/CA2.cer" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/trust-anchors/CA2.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase2/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.pt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase2/seginf_inv2223_phase2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/seginf_inv2223_trab2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise5/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex5/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/HybridCypher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex6/HybridCypher.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex6/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/exercise6/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pt/isel/seginf/trab1/ex6/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/async-jsonwebtoken.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/await-to.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/certificates/certificate.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/certificates/privatekey.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/CA2.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-certificate.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-privatekey.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.cer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.pfx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/https-server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/secure-server.pem" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,12 +103,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "14.18.0",
-    "javascript.nodejs.core.library.typings.version": "14.18.0",
+    "javascript.nodejs.core.library.configured.version": "18.12.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.9",
     "last_opened_file_path": "C:/ISEL/Courses/5th Semester/SegInf/isel-leic-seginf-g03/src/main/kotlin/pt/isel/seginf/trab2/ex6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -128,17 +126,17 @@
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\trab2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ISEL\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server\certificates" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\phase1" />
-      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\phase2" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="exercise6" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Node.js.app.js">
     <configuration name="isel-leic-seginf-g03 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -194,6 +192,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/js/ex7/app.js" working-dir="$PROJECT_DIR$/src/main/js/ex7">
+      <method v="2" />
+    </configuration>
     <configuration name="https-server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/js/https-server/https-server.js" working-dir="$PROJECT_DIR$/src/main/js/https-server">
       <method v="2" />
     </configuration>
@@ -203,10 +204,12 @@
       <item itemvalue="Kotlin.Decipher Application Cipher" />
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.File Hash Generator" />
+      <item itemvalue="Node.js.app.js" />
       <item itemvalue="Node.js.https-server.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.app.js" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Node.js.https-server.js" />
         <item itemvalue="Gradle.isel-leic-seginf-g03 [build]" />
@@ -243,6 +246,8 @@
       <workItem from="1668000727996" duration="131000" />
       <workItem from="1668894851745" duration="5053000" />
       <workItem from="1668955163978" duration="18086000" />
+      <workItem from="1668975466728" duration="2134000" />
+      <workItem from="1669061662114" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>

@@ -1,13 +1,14 @@
 import axios from 'axios';
 
 
+/**
+ * Login component.
+ */
 function Login() {
-
-	// Return login with google button
 	return (
 		<div>
 			<h1>Login</h1>
-			<a href="/api/login/google" >Login with Google</a>
+			<a href="https://www.secure-server.edu/api/login/google" >Login with Google</a>
 		</div>
 	);
 }

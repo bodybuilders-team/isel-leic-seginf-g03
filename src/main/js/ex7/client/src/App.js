@@ -6,7 +6,11 @@ import Tasks from './components/Tasks';
 import Login from './components/Login';
 import cookie from 'cookie';
 import { useNavigate } from 'react-router-dom';
+import NavBar from './components/NavBar';
 
+/**
+ * App component.
+ */
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const navigate = useNavigate();
@@ -18,13 +22,16 @@ function App() {
     setLoggedIn('user_id' in parsed);
   }, []);
 
+  /**
+   * Logs the user out.
+   */
   async function logout() {
     setLoggedIn(false);
     console.log("Logging out");
 
     await fetch("/api/logout", {
       method: 'post'
-    })
+    });
 
     navigate("/");
   }
@@ -32,20 +39,14 @@ function App() {
 
   return (<>
     <div className="App">
+      {/* <NavBar /> */}
       <ul>
         {
-          !loggedIn ?
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            :
-            <>
-              <li>
-                <Link to="/tasks">Tasks</Link>
-              </li>
-              <li>
-                <Link onClick={logout}>Logout</Link>
-              </li>
+          !loggedIn
+            ? <li><Link to="/login">Login</Link></li>
+            : <>
+              <li><Link to="/tasks">Tasks</Link></li>
+              <li><Link onClick={logout}>Logout</Link></li>
             </>
         }
       </ul>

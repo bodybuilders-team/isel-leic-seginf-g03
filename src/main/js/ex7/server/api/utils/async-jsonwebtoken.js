@@ -6,22 +6,20 @@ const oldVerify = jwt.verify;
 jwt.sign = (payload, secret, options) =>
 	new Promise((resolve, reject) => {
 		oldSign(payload, secret, options, (err, token) => {
-			if (err) {
+			if (err)
 				reject(err);
-			} else {
+			else
 				resolve(token);
-			}
 		});
 	});
 
 jwt.verify = (token, secret, options) =>
 	new Promise((resolve, reject) => {
 		oldVerify(token, secret, options, (err, data) => {
-			if (err) {
+			if (err)
 				reject(err);
-			} else {
+			else
 				resolve(data);
-			}
 		});
 	});
 
