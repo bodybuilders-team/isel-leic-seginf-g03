@@ -53,9 +53,12 @@ tentativa na interface de autenticação.
 
 ### Exercício 3
 
-**a)** ...
+**a)** Como a estrutura do cookie é conhecida e é constituida pelo identificador do utilizador e o seu hash,
+se a função de hash não for autenticada (e.g. SHA-256), o atacante pode gerar o cookie e fazer-se passar pelo utilizador.
 
-**b)** ...
+**b)** Para evitar este ataque, o cookie deve ser gerado no servidor com uma função de hash autenticada (HMAC),
+de forma a que o atacante não consiga gerar um cookie válido, pois não tem acesso à chave simétrica que é armazenada
+no servidor.
 
 ---
 
