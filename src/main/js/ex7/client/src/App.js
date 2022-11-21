@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Tasks from './components/Tasks';
 import Login from './components/Login';
 import cookie from 'cookie';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let parsed = cookie.parse(document.cookie);
@@ -20,39 +22,40 @@ function App() {
     setLoggedIn(false);
     console.log("Logging out");
 
-    const res = await fetch("/api/logout", {
+    await fetch("/api/logout", {
       method: 'post'
     })
+
+    navigate("/");
   }
 
 
-  return (
-    <Router>
-      <div className="App">
-        <ul>
-          {
-            !loggedIn ?
+  return (<>
+    <div className="App">
+      <ul>
+        {
+          !loggedIn ?
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            :
+            <>
               <li>
-                <Link to="/login">Login</Link>
+                <Link to="/tasks">Tasks</Link>
               </li>
-              :
-              <>
-                <li>
-                  <Link to="/tasks">Tasks</Link>
-                </li>
-                <li>
-                  <Link onClick={logout}>Logout</Link>
-                </li>
-              </>
-          }
-        </ul>
-      </div>
+              <li>
+                <Link onClick={logout}>Logout</Link>
+              </li>
+            </>
+        }
+      </ul>
+    </div>
 
-      <Routes>
-        <Route exact path='/tasks' element={< Tasks />}></Route>
-        <Route exact path='/login' element={< Login />}></Route>
-      </Routes>
-    </Router>
+    <Routes>
+      <Route exact path='/tasks' element={< Tasks />}></Route>
+      <Route exact path='/login' element={< Login />}></Route>
+    </Routes>
+  </>
   );
 }
 
