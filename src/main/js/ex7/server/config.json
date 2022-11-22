@@ -1,9 +1,9 @@
 {
-    "HOSTNAME": "www.secure-server.edu",
-    "HTTP_PORT": 80,
-    "HTTPS_PORT": 443,
-    "USE_HTTPS": true,
-    "DEV_MODE": true,
-    "DEV_MODE_HOSTNAME": "localhost",
-    "DEV_MODE_STATIC_URL": "http://localhost:3000"
+  "HOSTNAME": "www.secure-server.edu",
+  "HTTP_PORT": 80,
+  "HTTPS_PORT": 443,
+  "USE_HTTPS": true,
+  "DEV_MODE": false,
+  "DEV_MODE_HOSTNAME": "localhost",
+  "DEV_MODE_STATIC_URL": "http://localhost:8888"
 }

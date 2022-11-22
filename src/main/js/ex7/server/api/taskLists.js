@@ -1,60 +1,76 @@
 const express = require('express');
 const to = require('await-to-js').default;
-const jwt = require('./utils/async-jsonwebtoken'); // More info at: https://github.com/auth0/node-jsonwebtoken ; https://jwt.io/#libraries
 const axios = require('axios');
-const { getBearerHeaders } = require('./utils/utils');
+const {authHeaders} = require('./utils/utils');
 
-const TASKS_API_ENDPOINT = 'https://tasks.googleapis.com/tasks/v1'
-const TASKS_LISTS_ENDPOINT = `${TASKS_API_ENDPOINT}/users/@me/lists`
+const TASKS_API_ENDPOINT = 'https://tasks.googleapis.com/tasks/v1';
+const TASKS_LISTS_ENDPOINT = `${TASKS_API_ENDPOINT}/users/@me/lists`;
 
 module.exports = async function (database) {
-	const tasksRouter = await require('./tasks')(database);
-	const { jwtValidateMw, authorize } = await require('./middleware')(database);
+    const tasksRouter = await require('./tasks')(database);
+    const {jwtValidateMw, authorize} = await require('./utils/middleware.js')(database);
 
-	const router = express.Router();
+    const router = express.Router();
 
-	router.get('/', jwtValidateMw, async (req, res) => {
-		const user = req.user;
-		console.log("Received request for taskLists from user: ", user);
+    router.get('/', jwtValidateMw, authorize("tasks", "read"), getTaskList);
+    router.post('/', jwtValidateMw, authorize("tasks", "write"), createTaskList);
+    router.use("/:id/tasks", tasksRouter);
 
-		const [tasksErr, taskListsResponse] = await to(
-			axios.get(TASKS_LISTS_ENDPOINT, getBearerHeaders(user.access_token))
-		);
+    /**
+     * Fetchs the tasks lists from the API.
+     *
+     * @param {e.Request} req the request
+     * @param {e.Response} res the response
+     *
+     * @returns {Promise<*>} promise of the tasks lists
+     */
+    async function getTaskList(req, res) {
+        const user = req.user;
+        console.log("Received request for taskLists from user: ", user);
 
-		if (tasksErr)
-			return res.status(500).send('Error fetching task lists');
+        const [tasksErr, taskListsResponse] = await to(
+            axios.get(TASKS_LISTS_ENDPOINT, authHeaders(user.access_token))
+        );
 
-		const taskLists = taskListsResponse.data.items.map(taskList => {
-			return {
-				id: taskList.id,
-				title: taskList.title
-			}
-		});
+        if (tasksErr)
+            return res.status(500).send('Error fetching task lists');
 
-		res.json(taskLists);
-	});
+        const taskLists = taskListsResponse.data.items.map(taskList => {
+            return {
+                id: taskList.id,
+                title: taskList.title
+            };
+        });
 
-	router.post('/', jwtValidateMw, async (req, res) => {
-		console.log("Received request for tasks from user: ", req.user.email);
-		const user = req.user;
+        res.json(taskLists);
+    }
 
-		const { title } = req.body;
+    /**
+     * Creates a new task list.
+     *
+     * @param {e.Request} req the request
+     * @param {e.Response} res the response
+     *
+     * @returns {Promise<*>} promise of the task list
+     */
+    async function createTaskList(req, res) {
+        console.log("Received request for taskLists from user: ", req.user.email);
+        const user = req.user;
+        const {title} = req.body;
 
-		if (!title)
-			return res.status(400).json({ message: 'Bad request' });
+        if (!title)
+            return res.status(400).json({message: 'Bad request'});
 
-		const [tasksListsErr, tasksListsResponse] = await to(axios.post(TASKS_LISTS_ENDPOINT, { title }, getBearerHeaders(user.access_token)));
+        const [tasksListsErr, _] = await to(
+            axios.post(TASKS_LISTS_ENDPOINT, {title}, authHeaders(user.access_token))
+        );
 
-		if (tasksListsErr)
-			return res.status(500).send('Error creating task list');
+        if (tasksListsErr)
+            return res.status(500).send('Error creating task list');
 
-		res.json({ message: "Task list created successfully" });
-	});
+        res.json({message: "Task list created successfully"});
+    }
 
 
-	router.use("/:id/tasks", tasksRouter);
-
-	return router;
+    return router;
 };
-
-

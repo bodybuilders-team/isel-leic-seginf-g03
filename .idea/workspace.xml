@@ -4,51 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;">
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/services/apiService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_model.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_policy.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/taskLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/tasks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/async-jsonwebtoken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/certificates/certificate.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/certificates/privatekey.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/package.json" afterDir="false" />
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Trab2 exercise 2 fixed and exercise 6 done.">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/async-jsonwebtoken.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/await-to.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/certificates/certificate.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/certificates/privatekey.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/trab2/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.pt.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Tasks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/CA2.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-certificate.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server-privatekey.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.cer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/certificates/secure-server.pfx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/https-server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/https-server/secure-server.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/reportWebVitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/services/apiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/services/apiService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_model.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_model.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/middleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/taskLists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/taskLists.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/async-jsonwebtoken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/async-jsonwebtoken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +75,7 @@
         <option value="Kotlin Class" />
         <option value="package.json" />
         <option value="Kotlin File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -101,24 +91,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "18.12.1",
-    "javascript.nodejs.core.library.typings.version": "18.11.9",
-    "last_opened_file_path": "C:/ISEL/Courses/5th Semester/SegInf/isel-leic-seginf-g03/src/main/kotlin/pt/isel/seginf/trab2/ex6",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.ktlint"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;14.18.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;14.18.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ISEL/Courses/5th Semester/SegInf/isel-leic-seginf-g03/src/main/kotlin/pt/isel/seginf/trab2/ex6&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\andre\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\222.4345.14\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\kotlin\pt\isel\seginf\trab2\ex6" />
@@ -126,11 +117,11 @@
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\trab2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\ex7\server\api\utils" />
       <recent name="C:\ISEL\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server\certificates" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js" />
-      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\phase1" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="exercise6" />
@@ -159,7 +150,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Cipher Application Cipher" type="JetRunConfigurationType">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.exercise6.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.trab2.ex6.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
       <option name="PROGRAM_PARAMETERS" value="-enc .\docs\test-files\testFile.jpg .\docs\end-entities\Bob_1.cer .\docs\trust-anchors\CA.jks changeit .\docs\cert-int .\docs\test-files\encryptedTestFile.enc .\docs\test-files\encryptedSymmetricKey.enc" />
       <shortenClasspath name="NONE" />
@@ -168,7 +159,7 @@
       </method>
     </configuration>
     <configuration name="Decipher Application Cipher" type="JetRunConfigurationType">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.exercise6.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.trab2.ex6.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
       <option name="PROGRAM_PARAMETERS" value="-dec .\docs\test-files\encryptedTestFile.enc .\docs\test-files\encryptedSymmetricKey.enc .\docs\pfx\Bob_1.pfx changeit 1 .\docs\test-files\decryptedTestFile.jpg" />
       <shortenClasspath name="NONE" />
@@ -177,7 +168,7 @@
       </method>
     </configuration>
     <configuration name="File Hash Generator" type="JetRunConfigurationType" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.exercise5.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.trab1.ex5.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
       <option name="PROGRAM_PARAMETERS" value="SHA-1 .\docs\end-entities\Alice_1.cer" />
       <shortenClasspath name="NONE" />
@@ -188,14 +179,12 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pt.isel.seginf.trab2.ex6.MainKt" />
       <module name="isel-leic-seginf-g03.main" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/js/ex7/app.js" working-dir="$PROJECT_DIR$/src/main/js/ex7">
-      <method v="2" />
-    </configuration>
-    <configuration name="https-server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/js/https-server/https-server.js" working-dir="$PROJECT_DIR$/src/main/js/https-server">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/js/ex7/server/app.js" working-dir="$PROJECT_DIR$/src/main/js/ex7/server">
       <method v="2" />
     </configuration>
     <list>
@@ -205,13 +194,11 @@
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.File Hash Generator" />
       <item itemvalue="Node.js.app.js" />
-      <item itemvalue="Node.js.https-server.js" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.app.js" />
         <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Node.js.https-server.js" />
         <item itemvalue="Gradle.isel-leic-seginf-g03 [build]" />
         <item itemvalue="Kotlin.File Hash Generator" />
       </list>
@@ -248,6 +235,7 @@
       <workItem from="1668955163978" duration="18086000" />
       <workItem from="1668975466728" duration="2134000" />
       <workItem from="1669061662114" duration="383000" />
+      <workItem from="1669112025602" duration="18224000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>
@@ -339,5 +327,9 @@
         <watch expression="((PKIXBuilderParameters)params).unmodTrustAnchors" custom="java.security.cert.PKIXBuilderParameters" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

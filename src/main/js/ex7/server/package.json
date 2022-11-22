@@ -1,7 +1,7 @@
 {
   "name": "ex7",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web application for exercise 7 of the second work of the Computer Security course",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"

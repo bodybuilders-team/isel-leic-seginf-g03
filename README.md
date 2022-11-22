@@ -2,10 +2,10 @@
 
 > Computer Security project of group 03 from LEIC51D class.
 
-The project is divided in 2 phases:
+The project is divided in 2 works:
 
-* [Phase 1](docs/trab1/README.md)
-* [Phase 2](docs/trab2/README.md)
+* [Work 1](docs/trab1/README.md)
+* [Work 2](docs/trab2/README.md)
 
 ## Authors
 

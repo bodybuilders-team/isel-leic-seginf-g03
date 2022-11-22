@@ -119,10 +119,10 @@ Information Exchange".
 
 ### Exercício 5
 
-O quinto exercício está implementado na diretoria [exercise5](../../src/main/kotlin/pt/isel/seginf/exercise5).
+O quinto exercício está implementado na diretoria [exercise5](../../src/main/kotlin/pt/isel/seginf/trab1/ex5).
 
 ---
 
 ### Exercício 6
 
-O sexto exercício está implementado na diretoria [exercise6](../../src/main/kotlin/pt/isel/seginf/exercise6).
+O sexto exercício está implementado na diretoria [exercise6](../../src/main/kotlin/pt/isel/seginf/trab1/ex6).

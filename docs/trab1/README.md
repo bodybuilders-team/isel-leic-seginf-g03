@@ -120,10 +120,10 @@ Exchange".
 
 ### Exercise 5
 
-The fifth exercise is implemented in the [exercise5](../../src/main/kotlin/pt/isel/seginf/exercise5) folder.
+The fifth exercise is implemented in the [exercise5](../../src/main/kotlin/pt/isel/seginf/trab1/ex5) folder.
 
 ---
 
 ### Exercise 6
 
-The sixth exercise is implemented in the [exercise6](../../src/main/kotlin/pt/isel/seginf/exercise6) folder.
+The sixth exercise is implemented in the [exercise6](../../src/main/kotlin/pt/isel/seginf/trab1/ex6) folder.
