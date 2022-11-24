@@ -4,40 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Trab2 exercise 2 fixed and exercise 6 done.">
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Trab2 exercise 7 client improved.">
       <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/phase1/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab1/README.pt.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/trab2/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.pt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/components/Tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/services/apiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/services/apiService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/client/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/client/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_model.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/access_policy/rbac_model.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/middleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/taskLists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/taskLists.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/tasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/tasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/async-jsonwebtoken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/async-jsonwebtoken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/utils/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +206,8 @@
       <workItem from="1668955163978" duration="18086000" />
       <workItem from="1668975466728" duration="2134000" />
       <workItem from="1669061662114" duration="383000" />
-      <workItem from="1669112025602" duration="18224000" />
+      <workItem from="1669112025602" duration="19236000" />
+      <workItem from="1669326556301" duration="781000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>
@@ -293,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667837261230</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Trab2 exercise 7 client improved.">
+      <created>1669135939060</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669135939060</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +298,8 @@
     <MESSAGE value="Phase 1 delivered.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;&#10;Co-authored-by: André Páscoa &lt;a48089@alunos.isel.pt&gt;" />
     <MESSAGE value="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;" />
     <MESSAGE value="Phase 2 exercises 1 and 2 done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Phase 2 exercises 1 and 2 done." />
+    <MESSAGE value="Trab2 exercise 7 client improved." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trab2 exercise 7 client improved." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

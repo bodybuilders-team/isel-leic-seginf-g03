@@ -65,15 +65,20 @@ no servidor.
 
 ### Exercício 4
 
-**a)** ...
+**a)** O valor indicado no _scope_ é determinado pela **aplicação cliente**. O cliente pode pedir ao utilizador
+que escolha os _scopes_ que deseja que a aplicação tenha acesso.
 
-**b)** ...
+**b)** O cliente e o servidor de autorização comunicam indiretamente através do _browser_ do dono de recursos **quando
+o dono de recursos não tem uma sessão ativa no servidor de autorização**.
+Neste caso, o cliente redireciona o _browser_ do dono de recursos para o servidor de autorização,
+que pede ao dono de recursos para se autenticar.
+Após a autenticação, o servidor de autorização redireciona o _browser_ do dono de recursos para o cliente, que recebe
+o _access token_ e o _id token_.
 
-**c)** O _access_token_ é um token que permite ao cliente fazer pedidos ao servidor de recursos. Este token é
-gerado pelo servidor e enviado ao cliente, juntamente com o _refresh_token_, que permite ao cliente obter um novo
-_access_token_ caso este tenha expirado.
-Um _id_token_ é um token que contém informações sobre o utilizador, e é enviado ao cliente após o processo de
-autenticação.
+**c)** O _access_token_ é um token que permite ao cliente fazer pedidos ao servidor de recursos. Este token é gerado
+pelo servidor de autorização sendo enviado para o cliente.
+Um _id_token_ é um token que contém informações sobre o utilizador, sendo enviado ao cliente após o processo de
+autenticação. Este token tem o formato de um _JSON Web Token_ (JWT), e apenas existe no protocolo _OpenID Connect_.
 
 ---
 
