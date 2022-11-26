@@ -1,11 +1,11 @@
 const express = require('express');
 const axios = require('axios');
 const jwt = require('./utils/async-jsonwebtoken'); // More info at: https://github.com/auth0/node-jsonwebtoken ; https://jwt.io/#libraries
-const {authHeaders} = require('./utils/utils');
+const { authHeaders } = require('./utils/utils');
 const FormData = require('form-data');
 const to = require('await-to-js').default;
 const fs = require('fs');
-const {randomUUID} = require('crypto');
+const { randomUUID } = require('crypto');
 
 require('dotenv').config();
 const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
@@ -35,7 +35,7 @@ const TOKEN_COOKIE_KEY = 'token';
 const USERID_COOKIE_KEY = 'user_id';
 
 module.exports = async function (database) {
-    const {jwtValidateMw} = await require('./utils/middleware.js')(database);
+    const { jwtValidateMw } = await require('./utils/middleware.js')(database);
 
     const taskLists = await require('./tasklists')(database);
     const api = express.Router();
@@ -81,7 +81,7 @@ module.exports = async function (database) {
 
         const sessionUuid = randomUUID();
 
-        res.cookie('session-cookie', sessionUuid, {httpOnly: true, sameSite: 'lax'});
+        res.cookie('session-cookie', sessionUuid, { httpOnly: true, sameSite: 'lax' });
 
         res.redirect(
             'https://accounts.google.com/o/oauth2/v2/auth?' // Authorization endpoint
@@ -102,7 +102,7 @@ module.exports = async function (database) {
     async function googleCallback(req, res) {
         console.log(`Received redirect from OIDC provider with code: ${req.query.code}`);
 
-        const {state, code} = req.query;
+        const { state, code } = req.query;
         if (!state || !code)
             return res.status(400).send('Bad request');
 
@@ -121,7 +121,7 @@ module.exports = async function (database) {
         form.append('grant_type', 'authorization_code');
 
         const [tokenReqErr, tokenRes] = await to(
-            axios.post(TOKEN_ENDPOINT, form, {headers: form.getHeaders()})
+            axios.post(TOKEN_ENDPOINT, form, { headers: form.getHeaders() })
         );
 
         if (tokenReqErr) {
@@ -169,7 +169,7 @@ module.exports = async function (database) {
 
         // Generate a random session cookie based on the user email
         const [tokenErr, token] = await to(
-            jwt.sign({user_id: user.user_id}, JWT_SECRET, {algorithm: "HS256"})
+            jwt.sign({ user_id: user.user_id }, JWT_SECRET, { algorithm: "HS256" })
         );
 
         if (tokenErr)
@@ -183,7 +183,9 @@ module.exports = async function (database) {
         });
 
         // Set user_id cookie in localhost
-        res.cookie(USERID_COOKIE_KEY, user.user_id);
+        res.cookie(USERID_COOKIE_KEY, user.user_id, {
+            maxAge: 60 * 60 * 1000, // 1 hour
+        });
 
         res.redirect('/');
     }
@@ -222,11 +224,11 @@ module.exports = async function (database) {
         if (user.role === 'free') {
             user.role = 'premium';
             console.log(`Upgraded user ${user.email} to premium`);
-            return res.json({message: "User upgraded successfully from 'free' to premium"});
+            return res.json({ message: "User upgraded successfully from 'free' to premium" });
         } else if (user.role === 'premium') {
             user.role = 'admin';
             console.log(`Upgraded user ${user.email} to admin`);
-            return res.json({message: "User upgraded successfully from 'premium' to 'admin'"});
+            return res.json({ message: "User upgraded successfully from 'premium' to 'admin'" });
         }
     }
 
