@@ -1,6 +1,6 @@
 import './App.css';
-import {useEffect, useState} from 'react';
-import {Route, Routes, useNavigate} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Tasks from './components/Tasks';
 import Login from './components/Login';
 import cookie from 'cookie';
@@ -15,24 +15,25 @@ function App() {
     const navigate = useNavigate();
     const [user, setUser] = useState({});
 
+    /**
+     * Fetches the user from the server.
+     */
+    async function getProfile() {
+        const res = await fetch('/api/profile');
+
+        if (res.status !== 200) return;
+
+        const profile = await res.json();
+
+        setUser(profile);
+    }
+
     useEffect(() => {
         const parsed = cookie.parse(document.cookie);
         console.log(parsed);
 
         setLoggedIn('user_id' in parsed);
 
-        /**
-         * Fetches the user from the server.
-         */
-        async function getProfile() {
-            const res = await fetch('/api/profile');
-
-            if (res.status !== 200) return;
-
-            const profile = await res.json();
-
-            setUser(profile);
-        }
 
         getProfile();
     }, []);
@@ -44,7 +45,7 @@ function App() {
         setLoggedIn(false);
         console.log("Logging out");
 
-        await fetch("/api/logout", {method: 'post'});
+        await fetch("/api/logout", { method: 'post' });
 
         navigate("/");
     }
@@ -55,29 +56,31 @@ function App() {
     async function upgrade() {
         console.log("Upgrading user");
 
-        await fetch("/api/upgrade", {method: 'post'});
+        await fetch("/api/upgrade", { method: 'post' });
+
+        getProfile();
     }
 
     return (<>
-            <NavBar loggedIn={loggedIn} logout={logout} upgrade={upgrade} user={user}/>
+        <NavBar loggedIn={loggedIn} logout={logout} upgrade={upgrade} user={user} />
 
-            <div className="app-content">
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route exact path='/tasks' element={<Tasks/>}/>
-                    <Route exact path='/login' element={<Login/>}/>
-                </Routes>
-            </div>
+        <div className="app-content">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route exact path='/tasks' element={<Tasks />} />
+                <Route exact path='/login' element={<Login />} />
+            </Routes>
+        </div>
 
-            <footer>
-                <p>
-                    Made with ❤️ by group 3 of SegInf@ISEL in 2022/2023<br/>
-                    48089 André Páscoa<br/>
-                    48280 André Jesus<br/>
-                    48287 Nyckollas Brandão
-                </p>
-            </footer>
-        </>
+        <footer>
+            <p>
+                Made with ❤️ by group 3 of SegInf@ISEL in 2022/2023<br />
+                48089 André Páscoa<br />
+                48280 André Jesus<br />
+                48287 Nyckollas Brandão
+            </p>
+        </footer>
+    </>
     );
 }
 

@@ -1,14 +1,10 @@
-const DEV_MODE = false;
-
-const API_ENDPOINT = DEV_MODE ? 'http://localhost/api' : 'https://www.secure-server.edu/api';
-
 /**
  * Fetchs the tasks lists from the API.
  *
  * @returns {Promise<*>} promise of the tasks lists
  */
 async function getTaskLists() {
-    return await (await fetch(`${API_ENDPOINT}/taskLists`)).json();
+    return await (await fetch(`/api/taskLists`)).json();
 }
 
 /**
@@ -18,7 +14,7 @@ async function getTaskLists() {
  * @returns {Promise<*>} promise of the tasks
  */
 async function getTasks(taskListId) {
-    return await (await fetch(`${API_ENDPOINT}/taskLists/${taskListId}/tasks`)).json();
+    return await (await fetch(`/api/taskLists/${taskListId}/tasks`)).json();
 }
 
 /**
@@ -30,7 +26,7 @@ async function getTasks(taskListId) {
  * @returns {Promise<*>} promise of the task
  */
 async function insertTask(taskListId, task) {
-    const res = await fetch(`${API_ENDPOINT}/taskLists/${taskListId}/tasks`, {
+    const res = await fetch(`/api/taskLists/${taskListId}/tasks`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

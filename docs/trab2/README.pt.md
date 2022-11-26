@@ -65,8 +65,11 @@ no servidor.
 
 ### Exercício 4
 
-**a)** O valor indicado no _scope_ é determinado pela **aplicação cliente**. O cliente pode pedir ao utilizador
-que escolha os _scopes_ que deseja que a aplicação tenha acesso.
+**a)** 
+O valor indicado no scope representa os recursos a que o cliente pretende ter acesso, estas permissões são fornecidas
+pelo dono de recursos através do servidor de autorização. Por exemplo, se o cliente pretender aceder aos repositórios github da conta
+do dono de recursos, este redireciona o cliente para o servidor de autorização com o scope 'repo', quando o dono de recursos é redirecionado, este pode recusar ou aceitar o pedido de acesso, de seguida o servidor de autorização redireciona o cliente para o servidor de recursos com o token de acesso.
+Como o cliente é que decide que permissões ele pretende ter acesso, este é que determinado o valor do scope.
 
 **b)** O cliente e o servidor de autorização comunicam indiretamente através do _browser_ do dono de recursos **quando
 o dono de recursos não tem uma sessão ativa no servidor de autorização**.

@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import apiService from '../services/apiService';
 import {Alert, Card, CardContent, TextField} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import AddIcon from '@material-ui/icons/Add';
+import AddIcon from '@mui/icons-material/Add';
 import IconButton from "@mui/material/IconButton";
 
 /**

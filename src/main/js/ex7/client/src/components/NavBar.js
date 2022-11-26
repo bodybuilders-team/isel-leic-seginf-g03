@@ -8,14 +8,14 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import {useNavigate} from 'react-router-dom';
-import {Avatar, Button, Tooltip} from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+import { Avatar, Button, Tooltip } from "@mui/material";
 import TaskIcon from '@mui/icons-material/Task';
 
 /**
  * NavBar component.
  */
-function NavBar({loggedIn, logout, upgrade, user}) {
+function NavBar({ loggedIn, logout, upgrade, user }) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -41,7 +41,7 @@ function NavBar({loggedIn, logout, upgrade, user}) {
         <AppBar className="app-bar">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <TaskIcon sx={{display: {xs: 'none', md: 'flex'}, mr: 1}}/>
+                    <TaskIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -49,7 +49,7 @@ function NavBar({loggedIn, logout, upgrade, user}) {
                         href="/"
                         sx={{
                             mr: 2,
-                            display: {xs: 'none', md: 'flex'},
+                            display: { xs: 'none', md: 'flex' },
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
@@ -62,7 +62,8 @@ function NavBar({loggedIn, logout, upgrade, user}) {
 
                     {
                         loggedIn
-                            ? <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+                            ?
+                            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                                 <IconButton
                                     size="large"
                                     aria-label="account of current user"
@@ -71,7 +72,7 @@ function NavBar({loggedIn, logout, upgrade, user}) {
                                     onClick={handleOpenNavMenu}
                                     color="inherit"
                                 >
-                                    <MenuIcon/>
+                                    <MenuIcon />
                                 </IconButton>
                                 <Menu
                                     id="menu-appbar"
@@ -88,7 +89,7 @@ function NavBar({loggedIn, logout, upgrade, user}) {
                                     open={Boolean(anchorElNav)}
                                     onClose={handleCloseNavMenu}
                                     sx={{
-                                        display: {xs: 'block', md: 'none'},
+                                        display: { xs: 'block', md: 'none' },
                                     }}
                                 >
                                     <MenuItem onClick={() => navigate('/tasks')}>
@@ -106,7 +107,7 @@ function NavBar({loggedIn, logout, upgrade, user}) {
                         href=""
                         sx={{
                             mr: 2,
-                            display: {xs: 'flex', md: 'none'},
+                            display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
                             fontFamily: 'monospace',
                             fontWeight: 700,
@@ -117,29 +118,47 @@ function NavBar({loggedIn, logout, upgrade, user}) {
                     >
                         Task Manager
                     </Typography>
-                    <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {
                             loggedIn
-                                ? <>
-                                    <Button
-                                        onClick={() => navigate('/tasks')}
-                                        sx={{my: 2, color: 'white', display: 'block'}}
-                                    >
-                                        Tasks
-                                    </Button>
-                                </>
+                                ?
+                                <Button
+                                    onClick={() => navigate('/tasks')}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >
+                                    Tasks
+                                </Button>
                                 : <></>
                         }
                     </Box>
+                    <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+                        {loggedIn ?
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    mr: 2,
+                                    display: { xs: 'none', md: 'flex' },
+                                    fontFamily: 'monospace',
+                                    fontWeight: 700,
+                                    letterSpacing: '.3rem',
+                                    color: 'inherit',
+                                    textDecoration: 'none',
+                                }}
+                            >
+                                {user.role}
+                            </Typography>
+                            : <></>
+                        }
+                    </Box>
 
-                    <Box sx={{flexGrow: 0}}>
+                    <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{p: 0}}>
-                                <Avatar alt="User" src={loggedIn? user.picture : ""}/>
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <Avatar alt="User" src={loggedIn ? user.picture : ""} />
                             </IconButton>
                         </Tooltip>
                         <Menu
-                            sx={{mt: '45px'}}
+                            sx={{ mt: '45px' }}
                             id="menu-appbar"
                             anchorEl={anchorElUser}
                             anchorOrigin={{
@@ -157,12 +176,16 @@ function NavBar({loggedIn, logout, upgrade, user}) {
                             {
                                 loggedIn
                                     ? <>
-                                        <MenuItem onClick={() => {
-                                            handleCloseUserMenu();
-                                            upgrade();
-                                        }}>
-                                            <Typography textAlign="center">Upgrade</Typography>
-                                        </MenuItem>
+                                        {
+                                            user != null && user.role !== 'admin' ?
+                                                <MenuItem onClick={() => {
+                                                    handleCloseUserMenu();
+                                                    upgrade();
+                                                }}>
+                                                    <Typography textAlign="center">Upgrade</Typography>
+                                                </MenuItem>
+                                                : <></>
+                                        }
                                         <MenuItem onClick={() => {
                                             handleCloseUserMenu();
                                             logout();
