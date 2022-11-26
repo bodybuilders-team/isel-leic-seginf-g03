@@ -1,19 +1,16 @@
 const express = require('express');
 const axios = require('axios');
 const jwt = require('./utils/async-jsonwebtoken'); // More info at: https://github.com/auth0/node-jsonwebtoken ; https://jwt.io/#libraries
-const {authHeaders} = require('./utils/utils');
+const { authHeaders } = require('./utils/utils');
 const FormData = require('form-data');
 const to = require('await-to-js').default;
 const fs = require('fs');
+const { randomBytes, randomUUID } = require('crypto');
 
 require('dotenv').config();
 const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
 
-const DEV_MODE = config.DEV_MODE;
-const DEV_MODE_STATIC_URL = config.DEV_MODE_STATIC_URL;
-
-const SCHEME = config.USE_HTTPS ? 'https' : 'http';
-const SERVER_URI = `${SCHEME}://${DEV_MODE ? config.DEV_MODE_HOSTNAME : config.HOSTNAME}`;
+const SERVER_URI = `http://${config.HOSTNAME}`;
 
 const SCOPES = ['openid', 'email', 'profile', 'https://www.googleapis.com/auth/tasks'];
 const SCOPES_URL = SCOPES.join('%20');
@@ -21,6 +18,8 @@ const SCOPES_URL = SCOPES.join('%20');
 // Callback URL configured during Client registration in OIDC provider
 const REDIRECT_ENDPOINT = '/oauth2/redirect/google';
 const REDIRECT_URI = `${SERVER_URI}/api${REDIRECT_ENDPOINT}`;
+
+
 
 // System variables where client credentials are stored
 const CLIENT_ID = process.env.CLIENT_ID;
@@ -33,7 +32,7 @@ const TOKEN_COOKIE_KEY = 'token';
 const USERID_COOKIE_KEY = 'user_id';
 
 module.exports = async function (database) {
-    const {jwtValidateMw} = await require('./utils/middleware.js')(database);
+    const { jwtValidateMw } = await require('./utils/middleware.js')(database);
 
     const taskLists = await require('./tasklists')(database);
     const api = express.Router();
@@ -63,6 +62,7 @@ module.exports = async function (database) {
             user_id: user.user_id,
             email: user.email,
             name: user.name,
+            role: user.role,
             picture: user.picture
         });
     }
@@ -75,11 +75,16 @@ module.exports = async function (database) {
      */
     function googleLogin(req, res) {
         console.log('Received login request, redirecting to Google login page');
+
+        const sessionUuid = randomUUID();
+
+        res.cookie('session-cookie', sessionUuid, { httpOnly: true, sameSite: 'lax' });
+
         res.redirect(
             'https://accounts.google.com/o/oauth2/v2/auth?' // Authorization endpoint
             + `client_id=${CLIENT_ID}&`                     // Client id
             + `scope=${SCOPES_URL}&`                        // OpenID scope "openid email"
-            + 'state=value-based-on-user-session&'          // Used to check if the user-agent requesting login is the same making the request to the callback URL, more info at https://www.rfc-editor.org/rfc/rfc6749#section-10.12
+            + `state=${sessionUuid}&`          // Used to check if the user-agent requesting login is the same making the request to the callback URL, more info at https://www.rfc-editor.org/rfc/rfc6749#section-10.12
             + 'response_type=code&'                         // Response_type for "authorization code grant"
             + `redirect_uri=${REDIRECT_URI}`                // Redirect uri used to register RP
         );
@@ -94,10 +99,17 @@ module.exports = async function (database) {
     async function googleCallback(req, res) {
         console.log(`Received redirect from OIDC provider with code: ${req.query.code}`);
         // TODO: check if 'state' is correct for this session
-        const code = req.query.code;
 
-        if (!code)
+        const { state, code } = req.query;
+
+        if (!state || !code)
             return res.status(400).send('Bad request');
+
+        const sessionUuid = req.cookies["session-cookie"];
+        res.clearCookie('session-cookie');
+
+        if (sessionUuid !== state)
+            return res.status(401).send('State does not match session cookie');
 
         // content-type: application/x-www-form-urlencoded (URL-Encoded Forms)
         const form = new FormData();
@@ -108,7 +120,7 @@ module.exports = async function (database) {
         form.append('grant_type', 'authorization_code');
 
         const [tokenReqErr, tokenRes] = await to(
-            axios.post(TOKEN_ENDPOINT, form, {headers: form.getHeaders()})
+            axios.post(TOKEN_ENDPOINT, form, { headers: form.getHeaders() })
         );
 
         if (tokenReqErr) {
@@ -133,7 +145,7 @@ module.exports = async function (database) {
                 return res.status(500).send('Error fetching user info');
             }
             const userInfo = userInfoRes.data;
-
+            
             user = {
                 user_id: userInfo.sub,
                 email: userInfo.email,
@@ -144,11 +156,13 @@ module.exports = async function (database) {
             };
 
             database.users[user.user_id] = user;
+        } else {
+            user.access_token = tokenRes.data.access_token;
         }
 
         // Generate a random session cookie based on the user email
         const [tokenErr, token] = await to(
-            jwt.sign({user_id: user.user_id}, JWT_SECRET, {algorithm: "HS256"})
+            jwt.sign({ user_id: user.user_id }, JWT_SECRET, { algorithm: "HS256" })
         );
 
         if (tokenErr)
@@ -158,14 +172,13 @@ module.exports = async function (database) {
         res.cookie(TOKEN_COOKIE_KEY, token, {
             maxAge: 60 * 60 * 1000, // 1 hour
             httpOnly: true,
-            secure: true,
             sameSite: true
         });
 
         // Set user_id cookie in localhost
         res.cookie(USERID_COOKIE_KEY, user.user_id);
 
-        res.redirect(!DEV_MODE ? '/' : DEV_MODE_STATIC_URL);
+        res.redirect('/');
     }
 
     /**
@@ -183,7 +196,7 @@ module.exports = async function (database) {
 
         res.clearCookie(TOKEN_COOKIE_KEY);
         res.clearCookie(USERID_COOKIE_KEY);
-        res.redirect(!DEV_MODE ? '/' : DEV_MODE_STATIC_URL);
+        res.redirect('/');
     }
 
     /**
@@ -202,11 +215,11 @@ module.exports = async function (database) {
         if (user.role === 'free') {
             user.role = 'premium';
             console.log(`Upgraded user ${user.email} to premium`);
-            return res.json({message: "User upgraded successfully from 'free' to premium"});
+            return res.json({ message: "User upgraded successfully from 'free' to premium" });
         } else if (user.role === 'premium') {
             user.role = 'admin';
             console.log(`Upgraded user ${user.email} to admin`);
-            return res.json({message: "User upgraded successfully from 'premium' to 'admin'"});
+            return res.json({ message: "User upgraded successfully from 'premium' to 'admin'" });
         }
     }
 

@@ -11,8 +11,6 @@ const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
 
 const HOST_NAME = config.HOST_NAME;
 const HTTP_PORT = config.HTTP_PORT;
-const HTTPS_PORT = config.HTTPS_PORT;
-const USE_HTTPS = config.USE_HTTPS;
 const DEV_MODE = config.DEV_MODE;
 
 /**
@@ -45,28 +43,20 @@ async function init() {
     const api = await require('./api/api.js')(database);
     app.use('/api', api);
 
-    if (!DEV_MODE)
-        app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
-        });
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+    });
+
+    app.use((err, req, res, next) => {
+        console.error(err.stack);
+        res.status(500).send('Something broke!');
+    });
 
     // Create an HTTP server
     http.createServer(app).listen(HTTP_PORT, HOST_NAME, function (req, res) {
         console.log("HTTP Server started at port " + HTTP_PORT);
     });
 
-    if (USE_HTTPS) {
-        // Configure TLS handshake
-        const options = {
-            cert: fs.readFileSync('./certificates/certificate.pem'),
-            key: fs.readFileSync('./certificates/privatekey.pem'),
-        };
-
-        // Create HTTPS server
-        https.createServer(options, app).listen(HTTPS_PORT, HOST_NAME, function (req, res) {
-            console.log("HTTPS Server started at port " + HTTPS_PORT);
-        });
-    }
 }
 
 init().catch((err) => {
