@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Trab2 exercise 7 client improved.">
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Trab2 exercise 4 done.">
       <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/trab2/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.pt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +207,8 @@
       <workItem from="1668975466728" duration="2134000" />
       <workItem from="1669061662114" duration="383000" />
       <workItem from="1669112025602" duration="19236000" />
-      <workItem from="1669326556301" duration="781000" />
+      <workItem from="1669326556301" duration="861000" />
+      <workItem from="1669471550144" duration="3621000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>
@@ -272,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669135939060</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Trab2 exercise 4 done.">
+      <created>1669327379221</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669327379221</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +307,8 @@
     <MESSAGE value="HybridCypher now uses GCM.&#10;Diagram for exercise 1 added.&#10;&#10;&#10;Co-authored-by: Nyck &lt;nyckbrandao1236@gmail.com&gt;" />
     <MESSAGE value="Phase 2 exercises 1 and 2 done." />
     <MESSAGE value="Trab2 exercise 7 client improved." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trab2 exercise 7 client improved." />
+    <MESSAGE value="Trab2 exercise 4 done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trab2 exercise 4 done." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
