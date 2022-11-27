@@ -65,10 +65,13 @@ no servidor.
 
 ### Exercício 4
 
-**a)** 
+**a)**
 O valor indicado no scope representa os recursos a que o cliente pretende ter acesso, estas permissões são fornecidas
-pelo dono de recursos através do servidor de autorização. Por exemplo, se o cliente pretender aceder aos repositórios github da conta
-do dono de recursos, este redireciona o cliente para o servidor de autorização com o scope 'repo', quando o dono de recursos é redirecionado, este pode recusar ou aceitar o pedido de acesso, de seguida o servidor de autorização redireciona o cliente para o servidor de recursos com o token de acesso.
+pelo dono de recursos através do servidor de autorização. Por exemplo, se o cliente pretender aceder aos repositórios
+github da conta
+do dono de recursos, este redireciona o cliente para o servidor de autorização com o scope 'repo', quando o dono de
+recursos é redirecionado, este pode recusar ou aceitar o pedido de acesso, de seguida o servidor de autorização
+redireciona o cliente para o servidor de recursos com o token de acesso.
 Como o cliente é que decide que permissões ele pretende ter acesso, este é que determinado o valor do scope.
 
 **b)** O cliente e o servidor de autorização comunicam indiretamente através do _browser_ do dono de recursos **quando
@@ -87,9 +90,15 @@ autenticação. Este token tem o formato de um _JSON Web Token_ (JWT), e apenas 
 
 ### Exercício 5
 
-**a)** ...
+**a)** A família de modelos RBAC contribui para a implementação deste princípio, pois com a utilização do modelo RBAC1,
+existe uma hierarquia de permissões, de forma a que o utilizador tenha apenas as permissões necessárias para realizar
+as suas tarefas. Deste modo, com a utilização do princípio de privilégio mínimo, existirá um role com o conjunto mínimo
+de permissões, que estará na base da hierarquia, e que será um role júnior de todos os outros roles, de forma a que
+todos os outros roles tenham essas permissões mínimas.
 
-**b)** ...
+**b)** O utilizador `u2` não poderá aceder ao recurso `R`, pois o role do utilizador `u2` é `r2`, que tem as
+permissões `pa` e `pb`, herdadas dos roles `r0` e `r1`, respetivamente. Como o role `r2` não tem a permissão `pc`, o
+utilizador `u2` não poderá aceder ao recurso `R`.
 
 ---
 
