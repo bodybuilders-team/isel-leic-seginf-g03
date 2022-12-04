@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Trab2 exercise 4 done.">
+    <list default="true" id="d1ed7670-56d6-4eb9-88a3-4c1b549fb689" name="Changes" comment="Trab2 exercise 5 done.">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/ktlint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/trab2/README.pt.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/ex7/server/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/trab2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/trab2/README.pt.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/trab2/README.pt.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,25 +65,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;14.18.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;14.18.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ISEL/Courses/5th Semester/SegInf/isel-leic-seginf-g03/src/main/kotlin/pt/isel/seginf/trab2/ex6&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\andre\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\222.4345.14\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.12.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.10",
+    "last_opened_file_path": "C:/ISEL/Courses/5th Semester/SegInf/isel-leic-seginf-g03/src/main/kotlin/pt/isel/seginf/trab2/ex6",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
+    "ts.external.directory.path": "C:\\Users\\andre\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\222.4345.14\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\kotlin\pt\isel\seginf\trab2\ex6" />
@@ -88,11 +92,11 @@
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\trab2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\docs\trab2" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\ex7\server\api\utils" />
       <recent name="C:\ISEL\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server\certificates" />
       <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js\https-server" />
-      <recent name="C:\ISEL\Courses\5th Semester\SegInf\isel-leic-seginf-g03\src\main\js" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="exercise6" />
@@ -208,7 +212,10 @@
       <workItem from="1669061662114" duration="383000" />
       <workItem from="1669112025602" duration="19236000" />
       <workItem from="1669326556301" duration="861000" />
-      <workItem from="1669471550144" duration="3621000" />
+      <workItem from="1669471550144" duration="3670000" />
+      <workItem from="1669497458040" duration="1081000" />
+      <workItem from="1669507889314" duration="1651000" />
+      <workItem from="1670178561970" duration="7160000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Hybrid Cipher and an RSA key pair generator.">
       <created>1664647484344</created>
@@ -280,7 +287,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669327379221</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Bugs fixed.">
+      <created>1669482306617</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669482306617</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Trab2 exercise 5 done.">
+      <created>1669509472435</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669509472435</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +329,9 @@
     <MESSAGE value="Phase 2 exercises 1 and 2 done." />
     <MESSAGE value="Trab2 exercise 7 client improved." />
     <MESSAGE value="Trab2 exercise 4 done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trab2 exercise 4 done." />
+    <MESSAGE value="Bugs fixed." />
+    <MESSAGE value="Trab2 exercise 5 done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trab2 exercise 5 done." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

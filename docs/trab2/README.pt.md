@@ -1,6 +1,6 @@
 # Segurança Informática - Trabalho 2
 
-> Segunda fase do projeto de Segurança Informática do grupo 03 da turma LEIC51D.
+> Segundo trabalho de Segurança Informática do grupo 03 da turma LEIC51D.
 
 The English version of this document is available [here](README.md).
 
@@ -36,9 +36,9 @@ próprio MAC e compara-o com o MAC recebido, verificando se o handshake foi conc
 alterações maliciosas.
 
 **c)** A utilização de chaves públicas e privadas para estabelecer o _pre-master secret_ não garante a propriedade
-**perfect forward security**, porque a chave privada do servidor é partilhada com o cliente, permitindo que este
-possa decifrar as mensagens enviadas pelo servidor. Desta forma, se o servidor for comprometido, o cliente pode
-continuar a decifrar todas as mensagens enviadas pelo servidor, mesmo que o cliente tenha trocado as suas chaves.
+**perfect forward security**, porque o _pre-master secret_ gerado pelo cliente é partilhado com o servidor.
+Se um atacante encontrar a chave privada do servidor, conseguirá decifrar o _pre-master secret_ e, consequentemente,
+decifrar todas as mensagens trocadas entre o cliente e o servidor.
 
 ---
 
@@ -50,6 +50,8 @@ Como o atacante tem acesso ao salt, pode gerar todos os hashes possíveis para t
 interagir com a interface de autenticação, e comparar com o hash exposto. Caso o hash gerado seja igual ao hash
 exposto, o atacante pode então utilizar a password correspondente para se autenticar no servidor, utilizando apenas uma
 tentativa na interface de autenticação.
+
+---
 
 ### Exercício 3
 
@@ -65,19 +67,14 @@ no servidor.
 
 ### Exercício 4
 
-**a)**
-O valor indicado no scope representa os recursos a que o cliente pretende ter acesso, estas permissões são fornecidas
-pelo dono de recursos através do servidor de autorização. Por exemplo, se o cliente pretender aceder aos repositórios
-github da conta
-do dono de recursos, este redireciona o cliente para o servidor de autorização com o scope 'repo', quando o dono de
-recursos é redirecionado, este pode recusar ou aceitar o pedido de acesso, de seguida o servidor de autorização
-redireciona o cliente para o servidor de recursos com o token de acesso.
+**a)** O valor indicado no scope representa os recursos a que o cliente pretende ter acesso, estas permissões são
+fornecidas pelo dono de recursos através do servidor de autorização.
 Como o cliente é que decide que permissões ele pretende ter acesso, este é que determinado o valor do scope.
 
 **b)** O cliente e o servidor de autorização comunicam indiretamente através do _browser_ do dono de recursos **quando
 o dono de recursos não tem uma sessão ativa no servidor de autorização**.
-Neste caso, o cliente redireciona o _browser_ do dono de recursos para o servidor de autorização,
-que pede ao dono de recursos para se autenticar.
+Neste caso, o cliente redireciona o _browser_ do dono de recursos para o servidor de autorização, que pede ao dono de
+recursos para se autenticar.
 Após a autenticação, o servidor de autorização redireciona o _browser_ do dono de recursos para o cliente, que recebe
 o _access token_ e o _id token_.
 
@@ -90,15 +87,18 @@ autenticação. Este token tem o formato de um _JSON Web Token_ (JWT), e apenas 
 
 ### Exercício 5
 
-**a)** A família de modelos RBAC contribui para a implementação deste princípio, pois com a utilização do modelo RBAC1,
-existe uma hierarquia de permissões, de forma a que o utilizador tenha apenas as permissões necessárias para realizar
-as suas tarefas. Deste modo, com a utilização do princípio de privilégio mínimo, existirá um role com o conjunto mínimo
-de permissões, que estará na base da hierarquia, e que será um role júnior de todos os outros roles, de forma a que
-todos os outros roles tenham essas permissões mínimas.
+**a)** A família de modelos RBAC contribui para a implementação deste princípio, pois com a utilização destes modelos,
+é possível limitar as permissões a partir do mecanismo de roles, de forma a que um utilizador apenas tenha as permissões
+necessárias para executar as suas tarefas.
+O princípio de _least privilege_ indica que um utilizador deve ter apenas as permissões necessárias para executar as
+suas tarefas, e não mais do que isso. Este princípio é importante para garantir que um utilizador não tenha acesso a
+informações que não lhe são necessárias, e que não possa aceder a recursos que não lhe são permitidos.
+Se averiguar-se que um role tem mais permissões do que as necessárias, deve ser criado um novo role com apenas as
+permissões necessárias, e atribuir este novo role ao utilizador.
 
 **b)** O utilizador `u2` não poderá aceder ao recurso `R`, pois o role do utilizador `u2` é `r2`, que tem as
-permissões `pa` e `pb`, herdadas dos roles `r0` e `r1`, respetivamente. Como o role `r2` não tem a permissão `pc`, o
-utilizador `u2` não poderá aceder ao recurso `R`.
+permissões `pa` e `pb`, herdadas dos roles `r0` e `r1`, respetivamente. Como o role `r2` não herda a permissão `pc`
+de `r4`, o utilizador `u2` não poderá aceder ao recurso `R`.
 
 ---
 
@@ -116,8 +116,11 @@ Para executar o servidor, foi necessário realizar as seguintes configurações:
    que o servidor possa ser executado com sucesso, sem autenticação do cliente:
 
    ```bash
-   openssl pkcs12 -in secure-server.pfx -nokeys -out certificate.pem -password pass: # Gerar certificado
-   openssl pkcs12 -in secure-server.pfx -nocerts -out privatekey.pem --nodes -password pass: # Gerar chave privada não encriptada (--nodes)
+   # Gerar certificado
+   openssl pkcs12 -in secure-server.pfx -nokeys -out certificate.pem -password pass: 
+   
+   # Gerar chave privada não encriptada (--nodes)
+   openssl pkcs12 -in secure-server.pfx -nocerts -out privatekey.pem --nodes -password pass: 
    ```
 
 3. Instalar os certificados necessários para o servidor HTTPS:
@@ -156,4 +159,14 @@ Esta truststore é então colocada na propriedade `javax.net.ssl.trustStore` do 
 
 O exercício 7 foi implementado em dois diretórios distintos, `client` e `server`.
 
-...
+O nosso modelo de políticas de acesso foi implementado conforme o modelo RBAC1, contendo os seguintes roles:
+
+* `free`: utilizador apenas pode ver tasks;
+* `premium`: utilizador pode ver e editar tasks;
+* `admin`: utilizador pode ver e editar tasks.
+
+O role `free` tem uma permissão de leitura sobre o recurso `tasks`.
+O role `premium` herda as premissões do role `free`, e adiciona uma permissão de escrita sobre o recurso `tasks`.
+O role `admin` herda as premissões do role `premium`.
+
+Para executar o servidor, é necessário executar o comando `npm start` no diretório `server`.
